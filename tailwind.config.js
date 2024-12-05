@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        zentry: ['zentry', 'sans-serif'],
+        zentry: ['zentry-regular', 'sans-serif'],
         general: ['general', 'sans-serif'],
-        'circular-': ['circular', 'sans-serif'],
+        'circular-web': ['circular', 'sans-serif'],
         'robert-medium': ['robert-medium', 'sans-serif'],
         'robert-regular': ['robert-regular', 'sans-serif'],
       }
