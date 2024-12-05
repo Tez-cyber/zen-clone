@@ -1,12 +1,12 @@
+import { Hero } from "./components/hero"
 
 
 function App() {
 
-
   return (
-    <>
-      <div className="text-5xl font-zentry">Testing...</div>
-    </>
+    <main className="relative min-h-screen w-screen overflow-x-hidden">
+      <Hero />
+    </main>
   )
 }
 
