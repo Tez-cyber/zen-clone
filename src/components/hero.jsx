@@ -30,7 +30,7 @@ export const Hero = () => {
     return (
         <div className='relative h-dvh w-screen overflow-x-hidden'>
             <div id='video-frame' className='relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75'>
-                <div> 
+                <div>
                     <div className="mask-clip-path absolute-center absolute z-50 size-64
                         cursor-pointer overflow-hidden rounded-lg"
                     >
@@ -60,10 +60,10 @@ export const Hero = () => {
                         onLoadedData={handleVideoLoad}
                         className='absolute-center invisible absolute z-20 size-64 object-cover origin-center '
                     />
-                    <video 
+                    <video
                         src={getVideoSrc(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
                         autoPlay
-                        loop 
+                        loop
                         muted
                         onLoadedData={handleVideoLoad}
                         className='absolute left-0 top-0 size-full object-cover object-center'
@@ -79,6 +79,9 @@ export const Hero = () => {
                         <h1 className='special-font hero-heading text-blue-100'>
                             redefine
                         </h1>
+                        <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
+                            Enter the Metagame Layer <br /> Unleash the Play Economy
+                        </p>
                     </div>
                 </div>
             </div>
