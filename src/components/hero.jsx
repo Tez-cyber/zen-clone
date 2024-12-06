@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { useState } from 'react'
+import { Button } from './button';
 
 export const Hero = () => {
     const [currentIndex, setCurrentIndex] = useState(1);
@@ -82,6 +83,7 @@ export const Hero = () => {
                         <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
                             Enter the Metagame Layer <br /> Unleash the Play Economy
                         </p>
+                        <Button />
                     </div>
                 </div>
             </div>
