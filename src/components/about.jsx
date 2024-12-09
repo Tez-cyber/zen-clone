@@ -1,11 +1,34 @@
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/all"
+
+gsap.registerPlugin(ScrollTrigger)
 export const About = () => {
+    useGSAP(() => {
+        const clipAnimation = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#clip",
+                start: 'center center',
+                end: "+=800 center", // It'll trigger 800px after the center
+                scrub: 0.5, //Describes the movement of animation on scroll
+                pin: true,
+                pinSpacing: true
+            }
+        })
+
+        clipAnimation.to('.mask-clip-path', {
+            width: "100vw",
+            height: "100vh",
+            borderRadius: 0
+        })
+    }, [])
   return (
-    <div id="about" className="min-h-screen w-screen ">
+    <div id="about" className="min-h-screen w-screen">
         <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
             <h2 className="font-general text-sm uppercase md:text-[10px]">
                 Welcome to Zentry
             </h2>
-            <div className="mt-5 text-center text-4xl uppercase leading-[0.8] md:text-[6rem]">
+            <div className="mt-5 text-center text-4xl uppercase leading-[0.8] md:text-[5rem]">
                 Disc<b>o</b>ver the world's <br /> 
                 l<b>a</b>rgest shared adventure
             </div>
