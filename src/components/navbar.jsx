@@ -1,19 +1,28 @@
 import { useEffect, useRef, useState } from "react"
 import { Button } from "./button"
 import { TiLocationArrow } from "react-icons/ti"
+import { useWindowScroll } from "react-use";
 
 const navItems = ['Nexus', 'Vault', 'Prologue', 'About', 'Contact'];
 export const Navbar = () => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(false)
     const [isIndicatorActive, setIsIndicatorActive] = useState(false)
+    const [lastScrollY, setLastScrollY] = useState(0)
+    const [isNavVisible, setIsNavVisible] = useState(true)
 
     const navContainerRef = useRef(null)
     const audioElementRef = useRef(null)
+
+    const { y: currentScrollY } = useWindowScroll();
     const toggleAudioIndicator = () => {
         setIsAudioPlaying(prev => !prev)
         setIsIndicatorActive(prev => !prev)
     }
-
+    // ============= useEffects
+    useEffect(() => {
+      
+    }, [currentScrollY])
+    
     useEffect(() => {
         if (isAudioPlaying) {
             audioElementRef.current.play()
