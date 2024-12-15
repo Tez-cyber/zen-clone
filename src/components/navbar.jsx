@@ -1,9 +1,12 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { Button } from "./button"
 import { TiLocationArrow } from "react-icons/ti"
 
 const navItems = ['Nexus', 'Vault', 'Prologue', 'About', 'Contact'];
 export const Navbar = () => {
+    const [isAudioPlaying, setIsAudioPlaying] = useState(false)
+    const [isIndicatorActive, setIsIndicatorActive] = useState(false)
+
     const navContainerRef = useRef(null)
     const audioElementRef = useRef(null)
     const toggleAudioIndicator = () => {
